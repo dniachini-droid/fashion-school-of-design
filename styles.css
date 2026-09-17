@@ -76,9 +76,13 @@ h1,h2{ margin:0; font-family:'Anton',Impact,'Arial Narrow',sans-serif; font-weig
   padding:20px var(--pad) 24px;
   display:flex; flex-direction:column; justify-content:space-between; gap:24px;
 }
-.hero__top{ display:flex; justify-content:space-between; align-items:center; gap:12px; }
-.hero__mark{ font-family:'Anton',Impact,'Arial Narrow',sans-serif; font-size:22px; letter-spacing:.04em; }
-.hero__where{ font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--grey-soft); text-align:right; }
+.hero__top{ display:flex; justify-content:center; align-items:center; }
+/* The school's name across the top of the first screen: white, one line,
+   sized to the screen so it spans the width without being the headline. */
+.hero__mark{
+  font-family:'Anton',Impact,'Arial Narrow',sans-serif; text-transform:uppercase;
+  font-size:clamp(18px,6.4vw,32px); letter-spacing:.06em; white-space:nowrap; color:var(--white);
+}
 .hero__say{ display:flex; flex-direction:column; gap:16px; }
 .hero__head{
   font-size:clamp(62px,19vw,96px);
