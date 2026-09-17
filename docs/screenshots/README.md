@@ -4,13 +4,29 @@ Every picture here is a real render of the page at 390 pixels wide, the width of
 
 ## With photographs in `photos/`
 
-The first screen, with one of the photographs behind the headline:
+The first screen, with Anna at her cutting table behind the headline:
 
-![The first screen with a photograph behind the headline](6-with-photos-first-screen.png)
+![The first screen with the photograph of Anna at her cutting table behind the headline](6-with-photos-first-screen.png)
 
-"Made here" — the grid built from the folder:
+What is SITAM?
+
+![The section explaining what SITAM is](8-what-is-sitam.png)
+
+What you will do:
+
+![The five numbered sessions](9-what-you-will-do.png)
+
+Anna:
+
+![The section about Anna, with the empty slot for her photograph](10-anna.png)
+
+"Made here", the grid built from the folder:
 
 ![The photo grid built from the photos folder](7-with-photos-grid.png)
+
+The facts, and the slot for the certificate photograph:
+
+![The facts of the course and the empty certificate slot](11-the-facts.png)
 
 ## With `photos/` empty
 
@@ -32,4 +48,4 @@ The photo grid with nothing in the folder:
 
 And what someone sees after they send it:
 
-![Sent — Anna will call you](5-sent.png)
+![Sent. Anna will call you.](5-sent.png)

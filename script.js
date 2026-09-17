@@ -12,7 +12,7 @@
     err.textContent = message;
     err.hidden = false;
     button.disabled = false;
-    button.textContent = 'Send it';
+    button.textContent = 'Send';
   }
 
   form.addEventListener('submit', function (event) {

@@ -157,7 +157,7 @@ const annaRegion = anna
 
 const certificateRegion = certificate
   ? `  <img class="portrait" src="${certificate.href}" alt="The certificate issued by SITAM in Italy" loading="lazy">`
-  : `  <div class="slot slot--cert"><span class="slot__label">Photo of the SITAM certificate &mdash; coming</span></div>`;
+  : `  <div class="slot slot--cert"><span class="slot__label">Photo of the SITAM certificate, coming</span></div>`;
 
 const gridRegion = gallery.length
   ? `  <div class="grid">\n` +
