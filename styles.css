@@ -130,7 +130,7 @@ h1,h2{ margin:0; font-family:'Anton',Impact,'Arial Narrow',sans-serif; font-weig
 /* ── 2b. the three boxes ───────────────────────────────────────── */
 .box{
   border:3px solid var(--black); background:var(--white);
-  padding:18px; display:flex; gap:14px; align-items:flex-start;
+  padding:18px; display:flex; gap:16px; align-items:center;
 }
 .box__icon{ flex-shrink:0; }
 .box__head{ font-size:26px; line-height:1; margin-bottom:4px; }
