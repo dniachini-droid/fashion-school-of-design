@@ -57,6 +57,11 @@ h1,h2{ margin:0; font-family:'Anton',Impact,'Arial Narrow',sans-serif; font-weig
   position:absolute; inset:0;
   width:100%; height:100%;
   object-fit:cover;
+  /* Anna stands in the right third of the desk photo. On a phone the
+     photo is cropped to a tall slice, so aim that slice right of centre:
+     far enough that she is in frame, not so far that the sign and the
+     pattern on the table are lost. */
+  object-position:68% 50%;
 }
 .hero__veil{
   position:absolute; inset:0;
