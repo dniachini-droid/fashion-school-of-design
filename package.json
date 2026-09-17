@@ -1,0 +1,14 @@
+{
+  "name": "fashion-school-of-design",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The website for Anna's dressmaking school in Woodville South, Adelaide — the SITAM method of pattern drafting.",
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build-photos.mjs"
+  },
+  "dependencies": {
+    "heic-convert": "^2.1.0",
+    "sharp": "^0.33.5"
+  }
+}
