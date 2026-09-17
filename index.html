@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fashion School of Design: pattern drafting in Woodville South</title>
-<meta name="description" content="Anna teaches the SITAM method of pattern drafting in Woodville South, Adelaide. Groups of six. Every pattern drawn from your own measurements. The first hour is free.">
+<meta name="description" content="Anna teaches the SITAM method of pattern drafting in Woodville South, Adelaide. Groups of six. Every pattern drawn from your own measurements. Come and meet her for a free, no-obligation hour before you decide.">
 <meta property="og:title" content="Make it fit. Fashion School of Design">
-<meta property="og:description" content="Pattern drafting the Italian way. Small classes in Woodville South, Adelaide. The first hour is free.">
+<meta property="og:description" content="Pattern drafting the Italian way. Small classes in Woodville South, Adelaide. Come and meet Anna, one hour, no obligation.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +32,7 @@
       <h1 class="hero__head">Make it fit.</h1>
       <p class="hero__lede">Pattern drafting the Italian way. Small classes in Woodville South. Bring your ideas, leave with a garment that&rsquo;s actually yours.</p>
       <p class="hero__lede">No commercial patterns, ever</p>
-      <a class="btn btn--red" href="#enquire">Free first hour &rarr;</a>
+      <a class="btn btn--red" href="#enquire">Come and meet Anna &rarr;</a>
     </div>
   </div>
 </header>
@@ -157,11 +157,12 @@
 
 <!-- ───────────────────────── 10. The enquiry form ───────────────────────── -->
 <section class="enquire" id="enquire">
-  <h2 class="big">Free first hour.</h2>
-  <p>Tell Anna a little about yourself and what you&rsquo;d love to make. She reads every message herself, gives you a call, and finds a time that suits you for your free hour in the studio.</p>
+  <h2 class="big">Come and meet Anna.</h2>
+  <p>Before you decide anything, Anna offers an hour in the studio, free and with no obligation. She&rsquo;ll show you the SITAM square, walk you through what the course covers, show you what her students have made, and answer every question you have. Then you go home and think about it. Tell her a little about yourself below and she&rsquo;ll call to arrange a time.</p>
 
   <form class="form" name="enquiry" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="enquiry">
+    <input type="hidden" name="subject" value="New enquiry from the website">
     <p class="hp"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
     <label class="lab" for="f-name">Your name</label>
@@ -174,19 +175,19 @@
     <input class="in" id="f-email" name="email" type="email" autocomplete="email">
 
     <label class="lab" for="f-make">What would you like to make?</label>
-    <input class="in" id="f-make" name="wants_to_make" type="text" placeholder="A dress, a jacket, anything">
+    <input class="in" id="f-make" name="What they want to make" type="text" placeholder="A dress, a jacket, anything">
 
     <fieldset class="fs">
       <legend class="lab">Have you sewn before?</legend>
-      <label class="pick"><input type="radio" name="sewn_before" value="Never"> Never</label>
-      <label class="pick"><input type="radio" name="sewn_before" value="A little"> A little</label>
-      <label class="pick"><input type="radio" name="sewn_before" value="A lot"> A lot</label>
+      <label class="pick"><input type="radio" name="Sewn before" value="Never"> Never</label>
+      <label class="pick"><input type="radio" name="Sewn before" value="A little"> A little</label>
+      <label class="pick"><input type="radio" name="Sewn before" value="A lot"> A lot</label>
     </fieldset>
 
     <fieldset class="fs">
       <legend class="lab">Did you come through TAFE?</legend>
-      <label class="pick"><input type="radio" name="came_through_tafe" value="Yes"> Yes</label>
-      <label class="pick"><input type="radio" name="came_through_tafe" value="No"> No</label>
+      <label class="pick"><input type="radio" name="Came through TAFE" value="Yes"> Yes</label>
+      <label class="pick"><input type="radio" name="Came through TAFE" value="No"> No</label>
     </fieldset>
 
     <p class="err" id="form-error" hidden></p>
