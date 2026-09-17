@@ -25,7 +25,7 @@
 
     var name = form.elements['name'].value.trim();
     // The subject line of the email Anna gets: who it is from.
-    if (form.elements['subject']) form.elements['subject'].value = 'Enquiry from ' + (name || 'the website');
+    if (form.elements['subject']) form.elements['subject'].value = 'It\u2019s your lucky day, Anna: an enquiry from ' + (name || 'the website');
     var phone = form.elements['phone'].value.trim();
     if (!name || !phone) {
       fail('Please put in your name and a phone number so Anna can call you back.');
