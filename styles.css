@@ -119,6 +119,7 @@ h1,h2{ margin:0; font-family:'Anton',Impact,'Arial Narrow',sans-serif; font-weig
 .prose{ padding-top:40px; }
 .prose p{ margin:0 0 14px; color:var(--grey); line-height:1.5; }
 .big{ font-size:44px; line-height:.95; margin-bottom:14px; }
+.mid{ font-size:28px; line-height:1.05; margin-bottom:16px; }
 .note{ font-size:14px; color:#5A5A5A; }
 
 /* ── 2b. the three boxes ───────────────────────────────────────── */
