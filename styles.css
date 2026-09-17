@@ -1,0 +1,249 @@
+/* Fashion School of Design — one page, no framework. */
+
+:root{
+  --black:#0E0E0E;
+  --red:#FF3B1F;
+  --red-ink:#C8250F;      /* red that passes on white */
+  --white:#FFFFFF;
+  --grey:#2A2A2A;
+  --grey-soft:#C9C9C9;
+  --slot:#E8E8E8;
+  --pad:20px;
+  --max:760px;            /* the page is built for a phone; this stops it sprawling */
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+
+/* the form is display:flex, which would otherwise beat the hidden attribute */
+[hidden]{ display:none !important; }
+
+html{ -webkit-text-size-adjust:100%; }
+
+body{
+  margin:0;
+  background:var(--white);
+  color:var(--black);
+  font-family:'Work Sans',Helvetica,Arial,sans-serif;
+  font-size:17px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{ max-width:100%; display:block; }
+
+a{ color:var(--red-ink); }
+a:hover{ color:#A11D0B; }
+
+h1,h2{ margin:0; font-family:'Anton',Impact,'Arial Narrow',sans-serif; font-weight:400; text-transform:uppercase; }
+
+.skip{
+  position:absolute; left:-9999px; top:0; z-index:10;
+  background:var(--red); color:var(--black); padding:10px 14px; text-decoration:none;
+}
+.skip:focus{ left:0; }
+
+:focus-visible{ outline:3px solid var(--red); outline-offset:2px; }
+
+/* ── 1. first screen ───────────────────────────────────────────── */
+.hero{
+  position:relative;
+  min-height:100vh;
+  min-height:100svh;
+  background:var(--black);
+  color:var(--white);
+  overflow:hidden;
+}
+.hero__photo{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+}
+.hero__veil{
+  position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(14,14,14,.62) 0%, rgba(14,14,14,.45) 38%, rgba(14,14,14,.88) 100%);
+}
+.hero__inner{
+  position:relative;
+  min-height:100vh;
+  min-height:100svh;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:20px var(--pad) 24px;
+  display:flex; flex-direction:column; justify-content:space-between; gap:24px;
+}
+.hero__top{ display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.hero__mark{ font-family:'Anton',Impact,'Arial Narrow',sans-serif; font-size:22px; letter-spacing:.04em; }
+.hero__where{ font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--grey-soft); text-align:right; }
+.hero__say{ display:flex; flex-direction:column; gap:16px; }
+.hero__head{
+  font-size:clamp(62px,19vw,96px);
+  line-height:.9;
+  color:var(--red);
+  letter-spacing:.005em;
+}
+.hero__lede{ margin:0; font-size:17px; line-height:1.4; color:var(--white); }
+
+/* ── buttons ───────────────────────────────────────────────────── */
+.btn{
+  display:flex; align-items:center; justify-content:center;
+  width:100%; min-height:56px; padding:0 20px;
+  border:0; border-radius:999px;
+  font-family:'Anton',Impact,'Arial Narrow',sans-serif;
+  font-size:22px; letter-spacing:.06em; text-transform:uppercase;
+  text-decoration:none; cursor:pointer;
+}
+.btn--red{ background:var(--red); color:var(--black); }
+.btn--red:hover{ background:#ff512f; color:var(--black); }
+.btn--black{ background:var(--black); color:var(--red); }
+.btn--black:hover{ background:#242424; color:var(--red); }
+
+/* ── 2. ticker ─────────────────────────────────────────────────── */
+.ticker{
+  background:var(--red); color:var(--black);
+  height:44px; display:flex; align-items:center; overflow:hidden;
+}
+.ticker__track{ display:flex; white-space:nowrap; animation:slide 22s linear infinite; }
+.ticker__run{
+  font-family:'Anton',Impact,'Arial Narrow',sans-serif;
+  font-size:18px; letter-spacing:.08em; text-transform:uppercase;
+  padding-right:0;
+}
+@keyframes slide{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+@media (prefers-reduced-motion:reduce){
+  .ticker__track{ animation:none; padding-left:var(--pad); }
+}
+
+/* ── shared blocks ─────────────────────────────────────────────── */
+.boxes,.prose,.numbers,.enquire{ max-width:var(--max); margin:0 auto; padding:0 var(--pad); }
+.boxes{ padding-top:32px; display:flex; flex-direction:column; gap:10px; }
+.prose{ padding-top:40px; }
+.prose p{ margin:0 0 14px; color:var(--grey); line-height:1.5; }
+.big{ font-size:44px; line-height:.95; margin-bottom:14px; }
+.note{ font-size:14px; color:#5A5A5A; }
+
+/* ── 2b. the three boxes ───────────────────────────────────────── */
+.box{
+  border:3px solid var(--black); background:var(--white);
+  padding:18px; display:flex; gap:14px; align-items:flex-start;
+}
+.box__icon{ flex-shrink:0; }
+.box__head{ font-size:26px; line-height:1; margin-bottom:4px; }
+.box__body{ margin:0; font-size:16px; line-height:1.45; color:var(--grey); }
+
+/* ── 4. the five sessions ──────────────────────────────────────── */
+.steps{ list-style:none; margin:0 0 14px; padding:0; display:flex; flex-direction:column; gap:12px; }
+.steps li{ display:flex; gap:12px; align-items:baseline; color:var(--grey); }
+.steps__n{
+  font-family:'Anton',Impact,'Arial Narrow',sans-serif;
+  font-size:26px; line-height:1; color:var(--red); flex:0 0 26px;
+}
+
+/* ── empty slots (video, certificate, photos, Anna) ────────────── */
+.slot{
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;
+  border:3px solid var(--black);
+  text-align:center; padding:16px;
+}
+.slot__label{ font-size:12px; letter-spacing:.1em; text-transform:uppercase; }
+.slot--video{ aspect-ratio:16/9; background:var(--black); color:var(--grey-soft); border-color:var(--black); }
+.slot--video .slot__play{
+  width:0; height:0; border-style:solid; border-width:15px 0 15px 26px;
+  border-color:transparent transparent transparent var(--red);
+}
+.slot--cert{ background:var(--slot); color:#4A4A4A; min-height:180px; margin-top:6px; }
+.slot--portrait{ background:var(--slot); color:#4A4A4A; aspect-ratio:4/5; margin-bottom:14px; }
+.slot--photo{ background:var(--slot); color:#4A4A4A; aspect-ratio:3/4; border-width:2px; }
+.slot--photo:nth-child(2n){ background:var(--black); color:var(--grey-soft); }
+
+/* ── 5. the numbers ────────────────────────────────────────────── */
+.numbers{
+  margin-top:32px; padding-top:16px;
+  border-top:3px solid var(--black);
+  display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px;
+}
+.numbers>div{ display:flex; flex-direction:column; gap:4px; }
+.numbers__n{
+  font-family:'Anton',Impact,'Arial Narrow',sans-serif;
+  font-size:clamp(44px,14vw,56px); line-height:1; color:var(--red);
+}
+.numbers__l{ font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:.06em; line-height:1.2; }
+
+/* ── 6. Anna's photo ───────────────────────────────────────────── */
+.portrait{ width:100%; aspect-ratio:4/5; object-fit:cover; margin-bottom:14px; border:3px solid var(--black); }
+
+/* ── 8. the photo grid ─────────────────────────────────────────── */
+.grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; margin-top:4px; }
+.grid img{ width:100%; aspect-ratio:3/4; object-fit:cover; background:var(--slot); }
+
+/* ── 9. testimonial ────────────────────────────────────────────── */
+.quote{
+  margin-top:36px; background:var(--black); color:var(--white);
+  padding:32px var(--pad);
+}
+.quote>*{ max-width:var(--max); margin-left:auto; margin-right:auto; }
+.quote__mark{
+  margin:0; font-family:'Anton',Impact,'Arial Narrow',sans-serif;
+  font-size:64px; line-height:.6; color:var(--red);
+}
+.quote__wait{
+  margin:14px 0 0; font-size:14px; letter-spacing:.1em; text-transform:uppercase; color:var(--grey-soft);
+}
+
+/* ── 7. the facts ──────────────────────────────────────────────── */
+.facts{ margin:0 0 6px; border-top:3px solid var(--black); }
+.facts dt{
+  font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+  padding-top:14px;
+}
+.facts dd{ margin:4px 0 14px; color:var(--grey); }
+
+/* ── 10. the form ──────────────────────────────────────────────── */
+.enquire{ padding-top:40px; padding-bottom:40px; }
+.enquire>p{ color:var(--grey); margin:0 0 18px; }
+.form{ display:flex; flex-direction:column; }
+.lab{ font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; margin-top:14px; }
+.lab__opt{ font-weight:400; letter-spacing:.06em; color:#5A5A5A; text-transform:none; }
+.in{
+  min-height:48px; border:2px solid var(--black); background:var(--white);
+  font-family:inherit; font-size:17px; padding:0 12px; margin-top:6px; width:100%;
+}
+.in:focus{ outline:3px solid var(--red); outline-offset:1px; }
+.fs{ border:0; padding:0; margin:6px 0 0; display:flex; flex-wrap:wrap; gap:8px; }
+.fs legend{ padding:0; }
+.fs .lab{ margin-top:14px; }
+.pick{
+  display:flex; align-items:center; gap:8px;
+  border:2px solid var(--black); padding:10px 14px; min-height:48px;
+  font-size:16px; cursor:pointer; flex:1 1 auto;
+}
+.pick input{ accent-color:var(--red); width:18px; height:18px; }
+.pick:has(input:checked){ background:var(--black); color:var(--white); }
+.hp{ position:absolute; left:-9999px; }
+.err{ color:#B00D00; font-weight:600; margin:16px 0 0; }
+.form .btn{ margin-top:20px; }
+.sent{ border:3px solid var(--black); padding:20px; }
+.sent__head{ margin:0 0 8px; font-family:'Anton',Impact,'Arial Narrow',sans-serif; font-size:30px; line-height:1; text-transform:uppercase; color:var(--red-ink); }
+.sent__body{ margin:0; color:var(--grey); }
+.ring{ margin:18px 0 0; font-size:16px; color:var(--grey); }
+
+/* ── 11. footer ────────────────────────────────────────────────── */
+.foot{ background:var(--black); color:var(--white); padding:28px var(--pad) 36px; }
+.foot>*{ max-width:var(--max); margin-left:auto; margin-right:auto; }
+.foot__ig{
+  display:block; font-family:'Anton',Impact,'Arial Narrow',sans-serif;
+  font-size:clamp(19px,6vw,24px); letter-spacing:.04em; color:var(--red);
+  text-transform:uppercase; text-decoration:none;
+  /* the handle is one unbreakable word: never let it push the page sideways */
+  overflow-wrap:anywhere;
+}
+.foot__ig:hover{ color:#ff6a52; }
+.foot__where{ margin:8px auto 0; font-size:14px; color:var(--grey-soft); }
+.foot__ring{ margin:4px auto 0; font-size:14px; }
+.foot__ring a{ color:var(--grey-soft); }
+
+/* ── a little more room on a wide screen ───────────────────────── */
+@media (min-width:640px){
+  .big{ font-size:56px; }
+  .grid{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .boxes{ padding-top:40px; }
+}

@@ -1,0 +1,13 @@
+# Netlify builds the photo grid from the photos/ folder, then serves the page.
+[build]
+  command = "node tools/build-photos.mjs"
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
